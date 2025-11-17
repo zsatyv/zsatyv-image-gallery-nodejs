@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.header h1 {
+    font-size: 3.5em;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.masonry-gallery {
+    column-count: 4;
+    column-gap: 20px;
+}
+
+.masonry-item {
+    break-inside: avoid;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.masonry-item:hover {
+    box-shadow: 0 10px 30px #667eea30;
+    transform: translateY(-5px);
+}
+
+.masonry-item img {
+    width: 100%;
+    display: block;
+    border-radius: 15px 15px 0 0;
+    transition: filter 0.3s ease;
+}
+
+.masonry-item:hover img {
+    filter: brightness(0.9);
+}
+
+.item-info {
+    padding: 15px;
+}
+
+.item-info h3 {
+    color: #ffffff;
+    font-size: 1.1em;
+    margin-bottom: 8px;
+}
+
+.item-info p {
+    color: #ccc;
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+
+@media (max-width: 1200px) {
+    .masonry-gallery {
+        column-count: 3;
+    }
+}
+
+@media (max-width: 768px) {
+    .masonry-gallery {
+        column-count: 2;
+    }
+    .header h1 {
+        font-size: 2.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    .masonry-gallery {
+        column-count: 1;
+    }
+}
